@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Document Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5X3pKnrwpqz/id/obaoiC1Vl6+kwZO6IOLa6ri9"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-Blc05xXlwjI5cZK7K7ZgW5M5v5z4lE4C9G9QD57gjek0z87otAMQgIVfE8yh5Wy"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Q9g8"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-3">Employee Document Management</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="folder-structure" class="list-group">
+                    <!-- Folders will be dynamically populated here -->
+                </div>
+            </div>
+            <div class="col-md-8">
+                <nav aria-label="breadcrumb">
+                    <ol id="breadcrumb" class="breadcrumb">
+                        <!-- Breadcrumb will be dynamically populated here -->
+                    </ol>
+                    <!-- <div id="search-container" class="search-container">
+                        <i id="search-icon" class="fas fa-search"></i>
+                        <input type="text" id="search-input" class="search-input d-none" placeholder="Search...">
+                      </div> -->
+                </nav>
+                <div class="toolbar d-flex justify-content-between mt-3">
+                    <div class="search-container" id="search-container">
+                      <i class="fas fa-search" id="search-icon"></i>
+                      <input type="text" class="form-control d-none" id="search-input" placeholder="Search...">
+                    </div>
+                  
+                    <!-- Add this button for adding files -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadFileModal">
+                      Add
+                    </button>
+                  </div>
+                <div id="folder-overview" class="table-responsive">
+                    <table class="table table-striped table-hover dropzone">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>Created Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Folder and file list will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="uploadFileModal" tabindex="-1" role="dialog" aria-labelledby="uploadFileModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="uploadFileModalLabel">Upload File</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="fileInput">Choose file to upload</label>
+                  <input type="file" class="form-control-file" id="fileInput">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="uploadFileButton">Upload</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

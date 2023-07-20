@@ -1,0 +1,113 @@
+:root {
+    --primary: #9fc52d;
+    --primary-hover: #8db626;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary) !important;
+  }
+  
+  .text-primary {
+    color: var(--primary) !important;
+  }
+  
+  .icon-folder {
+    color: #f9a825;
+  }
+
+  .icon-word {
+    color: #2a5699;
+  }
+  
+  .icon-excel {
+    color: #217346;
+  }
+  
+  .icon-pdf {
+    color: #ed1c24;
+  }
+  
+  .breadcrumb-item i {
+    margin-right: 4px;
+  }
+
+  .search-container {
+    position: relative;
+  }
+  
+  .search-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .search-input {
+    top: 100%;
+    right: 0;
+    transition: all 0.3s;
+  }
+  
+  .search-input.d-block {
+    width: 250px;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .dropzone.dragging {
+    border: 3px dashed #007bff;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  #search-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  #search-input {
+    padding-left: 2.5rem;
+  }
+
+  .context-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 4px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .context-menu-item {
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  
+  .context-menu-item:hover {
+    background-color: #eee;
+  }
+  
